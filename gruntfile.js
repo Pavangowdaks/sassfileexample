@@ -8,7 +8,9 @@ grunt.loadNpmTasks('grunt-postcss')
 grunt.loadNpmTasks('grunt-contrib-cssmin')
 grunt.loadNpmTasks('grunt-contrib-uglify')
 grunt.loadNpmTasks('grunt-contrib-watch')
-grunt.registerTask('default', ['copy', 'sass']);
+grunt.loadNpmTasks('grunt-contrib-concat');
+
+grunt.registerTask('default', ['copy', 'sass','concat']);
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -27,7 +29,7 @@ sass: {
         files: [
           {
             expand: true,
-            cwd: 'src/',
+            cwd: 'public/src',
             src: ['**/*.scss'],
             dest: 'public/css',
             ext: '.css',
@@ -35,6 +37,18 @@ sass: {
         ],
       },
     },
+
+
+    concat: {
+      options: {
+                separator: '\n/* --/////-- */\n',
+                },
+      dist: {
+        src: ['**/homepage.css', '**/mixin.css','**/nesting.css'],
+        dest: 'public/css/final.css',
+        },
+      }
+
   });
 
 
