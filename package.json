@@ -6,7 +6,7 @@
   "dependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-copy": "^1.0.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "grunt-angular-builder": "^2.0.0",
