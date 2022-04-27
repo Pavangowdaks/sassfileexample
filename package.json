@@ -4,7 +4,7 @@
   "description": "webpack project start.",
   "main": "index.js",
   "dependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.2",
     "grunt-contrib-copy": "^1.0.0",
     "node-sass": "^4.12.0"
   },
